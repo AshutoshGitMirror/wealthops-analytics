@@ -207,7 +207,7 @@ The checks read the scenario size from `ops.scenario_config`, so the smaller pyt
 │   ├── cli.py                    # wealthops command
 │   ├── dashboard/data.py         # read-only dashboard queries
 │   └── nlq/                      # guard, rules, optional LLM, engine
-├── tests/                        # 105 pytest tests
+├── tests/                        # 124 pytest tests
 ├── Makefile
 ├── pyproject.toml
 └── requirements.txt
@@ -262,7 +262,7 @@ make demo
 This runs the full release gate in sequential order:
 1. `setup`: prepares the Python virtual environment and installs pinned dependencies.
 2. `build`: drops local databases, runs the deterministic generator (seed 42), loads parquet files into DuckDB operational tables (`ops.*`), builds the dimensional warehouse and 18 KPI views (`analytics.*`), executes the 43 data-quality checks, and exports 12 CSV reporting marts.
-3. `test`: executes all 123 pytest unit and integration tests against an isolated temporary test warehouse.
+3. `test`: executes all 124 pytest unit and integration tests against an isolated temporary test warehouse.
 
 ### 2. Launching and Navigating the Dashboard
 ```bash
